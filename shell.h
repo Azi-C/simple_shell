@@ -11,7 +11,7 @@
 #include <errno.h>
 #include <fcntl.h>
 
-
+#define DEL " \t\n"
 
 char *read_commands(void);
 char *_strdup(const char *str);
