@@ -9,17 +9,31 @@
 
 int main(int ac, char **argv)
 {
-	char *line = NULL;
+	char *ligne = NULL;
 	char **command = NULL;
-	int status;
+	int status = 0;
+	int i = 0;
 	(void) ac;
+	(void)argv;
+
 
 	while (1)
 	{
-		line = read_line();
+		ligne = read_commands();
+		if (ligne == NULL)
+		{
+			if (isatty(STDIN_FILENO))
+				write(STDIN_FILENO, "\n", 1);
+			return (status);
+		}
 
-		command = tokenizer(line);
+		command = tokenizer(ligne);
+		if (!command)
+			continue;
 
-		status = _execute(command, argv);
+		for (i = 0; command[i]; i++)
+			printf("%s\n", command[i]);
+
+		/*status = _execute(command, argv);*/
 	}
 }

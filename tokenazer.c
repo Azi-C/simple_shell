@@ -25,10 +25,11 @@ char **tokenizer(char *ligne)
 		free(ligne);
 		ligne = NULL;
 		return (NULL);
+	}
 	while (token)
 	{
 		c++;
-		token = strdok(NULL, DEL);
+		token = strtok(NULL, DEL);
 	}
 	free(tmp);
 	tmp = NULL;
@@ -39,6 +40,7 @@ char **tokenizer(char *ligne)
 		free(ligne);
 		ligne = NULL;
 		return (NULL);
+	}
 
 	token = strtok(ligne, DEL);
 

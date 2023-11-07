@@ -11,10 +11,10 @@ char *read_commands(void)
 	char *ligne = NULL;
 	size_t a;
 
-	if (isatty(STDIN_FILENO == 1)
+	if (isatty(STDIN_FILENO == 1))
 		write(STDOUT_FILENO, "$ ", 2);
 	a = getline(&ligne, &length, stdin);
-	if (a == -1)
+	if (a == (size_t)-1)
 	{
 		free(ligne);
 		return (NULL);

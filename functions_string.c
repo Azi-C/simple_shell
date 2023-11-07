@@ -15,7 +15,7 @@ char *_strdup(const char *str)
 		return (NULL);
 	while (str[j])
 		j++;
-	ptr = malooc(sizeof(char) * (j + 1));
+	ptr = malloc(sizeof(char) * (j + 1));
 	if (ptr == NULL)
 		return (NULL);
 	for (i = 0; i <= j; i++)
