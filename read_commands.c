@@ -2,7 +2,7 @@
 
 /**
  * read_commands - this is a function that read the commands in terminal
- * Return:the string!!
+ * Return:the string!
  */
 
 char *read_commands(void)
