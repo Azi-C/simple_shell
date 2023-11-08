@@ -8,9 +8,7 @@
 
 char *_getpath(char *cmd)
 {
-	char *path_env;
-	char *full_cmd;
-	char *dir;
+	char *path_env, *full_cmd, *dir;
 	struct stat st;
 	int i;
 
@@ -20,18 +18,18 @@ char *_getpath(char *cmd)
 		{
 			if (stat(cmd, &st) == 0)
 				return (_strdup(cmd));
-
 			return (NULL);
 		}
 	}
 
 	path_env = _getenv("PATH");
+	if (!path_env)
+		return (NULL);
 
 	dir = strtok(path_env, ":");
 	while (dir)
 	{
 		full_cmd = malloc(_strlen(dir) + _strlen(cmd) + 2);
-
 		if (full_cmd)
 		{
 			_strcpy(full_cmd, dir);
@@ -46,7 +44,6 @@ char *_getpath(char *cmd)
 			full_cmd = NULL;
 
 			dir = strtok(NULL, ":");
-
 		}
 	}
 	free(path_env);
