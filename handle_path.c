@@ -12,6 +12,18 @@ char *_getpath(char *cmd)
 	char *full_cmd;
 	char *dir;
 	struct stat st;
+	int i;
+
+	for (i = 0; cmd[i]; i++)
+	{
+		if (cmd[i] == '/')
+		{
+			if (stat(cmd, &st) == 0)
+				return (_strdup(cmd));
+
+			return (NULL);
+		}
+	}
 
 	path_env = _getenv("PATH");
 
