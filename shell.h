@@ -12,6 +12,7 @@
 #include <fcntl.h>
 
 #define DEL " \t\n"
+extern char **environ;
 
 char *read_commands(void);
 char *_strdup(const char *str);
@@ -20,7 +21,8 @@ int _strlen(char *s);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
 char **tokenizer(char *ligne);
-
+int _execute(char **commands, char **av);
+void freearray(char **a);
 
 
 #endif
