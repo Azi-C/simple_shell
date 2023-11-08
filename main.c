@@ -4,8 +4,7 @@
  * main - Simple Shell main function
  * @ac: Number of arguments
  * @argv: Array containing the arguments
- * Reurn: 0 Always (sucess)
- * Description - this is the main function that return 0
+ * Return: 0 Always (sucess)
  */
 
 int main(int ac, char **argv)
