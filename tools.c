@@ -73,7 +73,7 @@ char *_itoa(int n)
 }
 
 /**
- * reverse_str - reverse a string
+ * reverse_str - reverse a strings
  * @str: the string
  * @len: the length of the string
  * Return: the string reversed
