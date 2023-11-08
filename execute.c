@@ -4,10 +4,11 @@
  * _execute - this is the function that run the commands
  * @commands: this is the variable contient the commands
  * @av: the variable
+ * @idx: the index of the command
  * Return: integer
  */
 
-int _execute(char **commands, char **av)
+int _execute(char **commands, char **av, int idx)
 {
 	int status;
 	pid_t child;
@@ -16,9 +17,9 @@ int _execute(char **commands, char **av)
 	full_cmd = _getpath(commands[0]);
 	if (!full_cmd)
 	{
-		printerror();
+		printerr(av[0], commands[0], idx);
 		freearray(commands);
-		return ();
+		return (127);
 	}
 	child = fork();
 	if (child == 0)

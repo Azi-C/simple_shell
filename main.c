@@ -11,7 +11,7 @@ int main(int ac, char **argv)
 {
 	char *ligne = NULL;
 	char **command = NULL;
-	int status = 0;
+	int status = 0, idx = 0;
 	(void) ac;
 
 
@@ -24,12 +24,13 @@ int main(int ac, char **argv)
 				write(STDIN_FILENO, "\n", 1);
 			return (status);
 		}
+		idx++;
 
 		command = tokenizer(ligne);
 		if (!command)
 			continue;
 
 
-		status = _execute(command, argv);
+		status = _execute(command, argv, idx);
 	}
 }

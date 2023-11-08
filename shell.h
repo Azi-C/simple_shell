@@ -21,13 +21,13 @@ int _strlen(char *s);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
 char **tokenizer(char *ligne);
-int _execute(char **commands, char **av);
+int _execute(char **commands, char **av, int idx);
 void freearray(char **a);
 char *_getenv(char *var);
 char *_getpath(char *cmd);
 void printerr(char *name, char *md, int idx);
 void reverse_str(char *str, int len);
-char _*itoa(int n);
+char *_itoa(int n);
 
 
 

@@ -1,15 +1,16 @@
 #include "shell.h"
 
-/*
+/**
  * freearray - this function for testing!
  * @a: this is a variable matrix
- * Return:nothh
  */
 void freearray(char **a)
 {
 	int i = 0;
+
 	if (!a)
-		return ;
+		return;
+
 	for (i = 0; a[i]; i++)
 	{
 		free(a[i]);
@@ -44,12 +45,12 @@ void printerr(char *name, char *cmd, int idx)
 }
 
 /**
- * _itoa - functions that transfomate an int to a string
+ * _itoa - function that transfomate an int to a string
  * @n: the int
  * Return: the int into char
  */
 
-char _*itoa(int n)
+char *_itoa(int n)
 {
 	char buffer[25];
 	int i = 0;
@@ -82,7 +83,7 @@ void reverse_str(char *str, int len)
 {
 	char tmp;
 	int start = 0;
-	int end = len -a;
+	int end = len - 1;
 
 	while (start < end)
 	{
