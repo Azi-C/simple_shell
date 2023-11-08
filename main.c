@@ -2,8 +2,8 @@
 
 /**
  * main - Simple Shell main function
- * @ac: Number of arguments
- * @argv: Array containing the arguments
+ * @ac: Number of Arguments
+ * @argv: Array containing the Arguments
  * Return: 0 Always (sucess)
  */
 
