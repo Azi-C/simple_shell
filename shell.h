@@ -24,5 +24,6 @@ char **tokenizer(char *ligne);
 int _execute(char **commands, char **av);
 void freearray(char **a);
 char *_getenv(char *var);
+char *_getpath(char *cmd);
 
 #endif
