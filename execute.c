@@ -11,22 +11,31 @@ int _execute(char **commands, char **av)
 {
 	int status;
 	pid_t child;
+	char *full_cmd;
 
+	full_cmd = _getpath(commands[0]);
+	if (!full_cmd)
+	{
+		printerror();
+		freearray(commands);
+		return ();
+	}
 	child = fork();
 	if (child == 0)
 	{
-		if (execve(commands[0], commands, environ) == -1)
+		if (execve(full_cmd, commands, environ) == -1)
 		{
-			perror(av[0]);
+			free(full_cmd);
+			full_cmd = NULL;
 			freearray(commands);
-			exit(0);
 		}
-		freearray(commands);
 	}
 	else
 	{
 		waitpid(child, &status, 0);
 		freearray(commands);
+		free(full_cmd);
+		full_cmd = NULL;
 	}
 	return (WEXITSTATUS(status));
 }

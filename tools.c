@@ -18,3 +18,15 @@ void freearray(char **a)
 	free(a);
 	a = NULL;
 }
+
+/**
+ * printerr - prints an error
+ * @name: the shell name
+ * @cmd: la command
+ * @idx: index of the command
+ */
+
+void printerr(char *name, char *md, int idx)
+{
+
+}
