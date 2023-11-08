@@ -15,10 +15,11 @@ int _execute(char **commands, char **av)
 	child = fork();
 	if (child == 0)
 	{
-		if (exexve(commands[0], commands, environ) == -1)
+		if (execve(commands[0], commands, environ) == -1)
 		{
 			perror(av[0]);
 			freearray(commands);
+			exit(0);
 		}
 		freearray(commands);
 	}

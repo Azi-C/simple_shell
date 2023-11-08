@@ -7,6 +7,7 @@
  */
 void freearray(char **a)
 {
+	int i = 0;
 	if (!a)
 		return ;
 	for (i = 0; a[i]; i++)

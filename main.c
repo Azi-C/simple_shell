@@ -5,6 +5,7 @@
  * @ac: Number of arguments
  * @argv: Array containing the arguments
  * Reurn: 0 Always (sucess)
+ * Description - this is the main function that return 0
  */
 
 int main(int ac, char **argv)
@@ -12,9 +13,7 @@ int main(int ac, char **argv)
 	char *ligne = NULL;
 	char **command = NULL;
 	int status = 0;
-	int i = 0;
 	(void) ac;
-	(void)argv;
 
 
 	while (1)
@@ -32,6 +31,6 @@ int main(int ac, char **argv)
 			continue;
 
 
-		/*status = _execute(command, argv);*/
+		status = _execute(command, argv);
 	}
 }
