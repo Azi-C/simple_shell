@@ -26,5 +26,10 @@ void freearray(char **a);
 char *_getenv(char *var);
 char *_getpath(char *cmd);
 void printerr(char *name, char *md, int idx);
+void reverse_str(char *str, int len);
+char _*itoa(int n);
+
+
+
 
 #endif
