@@ -4,7 +4,7 @@
  * main - Simple Shell main function
  * @ac: Number of arguments
  * @argv: Array containing the arguments
- * Reurn: 0 Always (sucess)
+ * Return: 0 Always (sucess)
  */
 
 int main(int ac, char **argv)
@@ -12,7 +12,6 @@ int main(int ac, char **argv)
 	char *ligne = NULL;
 	char **command = NULL;
 	int status = 0;
-	int i = 0;
 	(void) ac;
 	(void)argv;
 
