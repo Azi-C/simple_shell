@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * main - Simple Shell main function
+ * main - Simple Shell main function source code
  * @ac: Number of Arguments
  * @argv: Array containing the Arguments
  * Return: 0 Always (sucess)
