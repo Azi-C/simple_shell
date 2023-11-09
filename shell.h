@@ -31,6 +31,10 @@ void printerr(char *name, char *md, int idx);
 void reverse_str(char *str, int len);
 char *_itoa(int n);
 
+int fct_built(char *commande);
+void hd_buil(char **commande, char **argv, int *status, int idx);
+void exit_shell(char **commande, int *status);
+void print_env(char **commande, int *status);
 
 
 

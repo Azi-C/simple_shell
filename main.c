@@ -30,7 +30,10 @@ int main(int ac, char **argv)
 		if (!command)
 			continue;
 
+		if (fct_built(command[0]))
+			hd_buil(command, argv, &status, idx);
+		else 
+			status = _execute(command, argv, idx);
 
-		status = _execute(command, argv, idx);
 	}
 }
