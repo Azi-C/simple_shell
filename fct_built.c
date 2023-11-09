@@ -31,8 +31,7 @@ int fct_built(char *commande)
 
 void hd_buil(char **commande, char **argv, int *status, int idx)
 {
-	(void) argv;
-	(void) idx;
+
 	if (_strcmp(commande[0], "exit") == 0)
 		exit_shell(commande, status);
 	else if (_strcmp(commande[0], "env") == 0)
@@ -47,10 +46,33 @@ void hd_buil(char **commande, char **argv, int *status, int idx)
  * Return: sgmt default
  */
 
-void exit_shell(char **commande, int *status)
+void exit_shell(char **commande, char **argv, int *status, int idx)
 {
+	int val = (*status);
+	char *index;
+	char msg[] = ": exit: Illegal number: ";
+
+	if (commande[1])
+	{
+		if (is_positive(commande[1]))
+			val = _itoa(commande[1]);
+		else
+		{
+			index = _itoa(idx);
+			write(STDERR_FILENO, argv[0],_strlen(argv[0]));
+			write(STDERR_FILENO, ": ", 2);
+			write(STDERR_FILENO, index, _strlen(index));
+			write(STDERR_FILENO, msg, _strlen(msg));
+			write(STDERR_FILENO, commande[1], _strlen(commande[1]));
+			write(STDERR_FILENO, "\n", 1);
+			free(index);
+			freearray(commande);
+			return;
+		}
+	}
+
 	freearray(commande);
-	exit(*status);
+	exit(val);
 }
 
 /**

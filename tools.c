@@ -93,4 +93,26 @@ void reverse_str(char *str, int len)
 		start++;
 		end--;
 	}
+
+}
+
+/**
+ * is_positive - verify if a variable is a number
+ * @str: the string
+ * Return: 1 if str is a positif number, 0 otherwise
+ */
+
+int is_positive(char *str)
+{
+	int i;
+
+	if (!str)
+		return (0);
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+	}
+
+	return (1);
 }

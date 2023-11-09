@@ -33,9 +33,9 @@ char *_itoa(int n);
 
 int fct_built(char *commande);
 void hd_buil(char **commande, char **argv, int *status, int idx);
-void exit_shell(char **commande, int *status);
+void exit_shell(char **commande, char **argv, int *status, int idx);
 void print_env(char **commande, int *status);
-
+int is_positive(char *str);
 
 
 #endif
