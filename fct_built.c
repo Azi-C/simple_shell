@@ -67,6 +67,7 @@ void exit_shell(char **commande, char **argv, int *status, int idx)
 			write(STDERR_FILENO, "\n", 1);
 			free(index);
 			freearray(commande);
+			(*status) = 2;
 			return;
 		}
 	}
