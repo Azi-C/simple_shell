@@ -33,7 +33,7 @@ void hd_buil(char **commande, char **argv, int *status, int idx)
 {
 
 	if (_strcmp(commande[0], "exit") == 0)
-		exit_shell(commande, status);
+		exit_shell(commande, argv, status, idx);
 	else if (_strcmp(commande[0], "env") == 0)
 		print_env(commande, status);
 
@@ -55,7 +55,7 @@ void exit_shell(char **commande, char **argv, int *status, int idx)
 	if (commande[1])
 	{
 		if (is_positive(commande[1]))
-			val = _itoa(commande[1]);
+			val = _atoi(commande[1]);
 		else
 		{
 			index = _itoa(idx);

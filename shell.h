@@ -36,6 +36,7 @@ void hd_buil(char **commande, char **argv, int *status, int idx);
 void exit_shell(char **commande, char **argv, int *status, int idx);
 void print_env(char **commande, int *status);
 int is_positive(char *str);
+int _atoi(char *str);
 
 
 #endif
