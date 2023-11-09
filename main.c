@@ -32,7 +32,7 @@ int main(int ac, char **argv)
 
 		if (fct_built(command[0]))
 			hd_buil(command, argv, &status, idx);
-		else 
+		else
 			status = _execute(command, argv, idx);
 
 	}

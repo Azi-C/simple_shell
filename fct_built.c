@@ -59,7 +59,7 @@ void exit_shell(char **commande, char **argv, int *status, int idx)
 		else
 		{
 			index = _itoa(idx);
-			write(STDERR_FILENO, argv[0],_strlen(argv[0]));
+			write(STDERR_FILENO, argv[0], _strlen(argv[0]));
 			write(STDERR_FILENO, ": ", 2);
 			write(STDERR_FILENO, index, _strlen(index));
 			write(STDERR_FILENO, msg, _strlen(msg));

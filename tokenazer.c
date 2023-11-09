@@ -10,8 +10,7 @@ char **tokenizer(char *ligne)
 {
 	char *tmp = NULL;
 	char **command = NULL;
-	int c = 0;
-	int i = 0;
+	int c = 0, i = 0;
 	char *token = NULL;
 
 	if (!ligne)
@@ -31,27 +30,22 @@ char **tokenizer(char *ligne)
 		c++;
 		token = strtok(NULL, DEL);
 	}
-	free(tmp);
-	tmp = NULL;
-
+	free(tmp), tmp = NULL;
 	command = malloc(sizeof(char *) * (c + 1));
-	if(!command)
+	if (!command)
 	{
 		free(ligne);
 		ligne = NULL;
 		return (NULL);
 	}
-
 	token = strtok(ligne, DEL);
-
-	while(token)
+	while (token)
 	{
 		command[i] = _strdup(token);
 		token = strtok(NULL, DEL);
 		i++;
 	}
-	free(ligne);
-	ligne = NULL;
+	free(ligne), ligne = NULL;
 	command[i] = NULL;
 	return (command);
 }
