@@ -38,5 +38,9 @@ void print_env(char **commande, int *status);
 int is_positive(char *str);
 int _atoi(char *str);
 
+void _puterror(char *r);
+int print_setenv(char **commande);
+int print_unsetenv(char **commande);
+
 
 #endif

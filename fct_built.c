@@ -9,11 +9,11 @@
 int fct_built(char *commande)
 {
 	char *buil[] = {
-		"exit", "env", "setenv", "cd"
+		"exit", "env", "setenv", "cd", "unsetenv"
 	};
 	int i;
 
-	for (i = 0; i < 4; i++)
+	for (i = 0; i < 5; i++)
 	{
 		if (_strcmp(commande, buil[i]) == 0)
 			return (1);
@@ -36,6 +36,12 @@ void hd_buil(char **commande, char **argv, int *status, int idx)
 		exit_shell(commande, argv, status, idx);
 	else if (_strcmp(commande[0], "env") == 0)
 		print_env(commande, status);
+	else if (_strcmp(commande[0], "setenv") == 0)
+		print_setenv(commande);
+	else if (_strcmp(commande[0], "unsetenv") == 0)
+		print_unsetenv(commande);
+
+
 
 
 }
