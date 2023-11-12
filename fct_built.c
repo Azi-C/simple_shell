@@ -42,8 +42,6 @@ void hd_buil(char **commande, char **argv, int *status, int idx)
 		print_unsetenv(commande);
 	else if (_strcmp(commande[0], "cd") == 0)
 		command_cd(commande);
-	else if (_strcmp(commande[0], "alias") == 0)
-		alias_fct(commande);
 }
 
 /**
