@@ -40,8 +40,13 @@ void hd_buil(char **commande, char **argv, int *status, int idx)
 		print_setenv(commande);
 	else if (_strcmp(commande[0], "unsetenv") == 0)
 		print_unsetenv(commande);
+<<<<<<< HEAD
 	else if (_strcmp(commande[0] == "cd") == 0)
 		 
+=======
+	else if (_strcmp(commande[0], "cd") == 0)
+		command_cd(commande);
+>>>>>>> 252542e64d12ac429f5c1a57e6f82f9c8cd73801
 
 
 

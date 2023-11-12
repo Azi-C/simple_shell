@@ -18,3 +18,22 @@ void _puterror(char *r)
 		perror("write");
 	}
 }
+
+/**
+ * _puts - printting the string
+ * @str: the variable stringg
+ *
+ * Return: nothing
+ */
+void _puts(char *str)
+{
+	size_t len;
+	ssize_t num;
+
+	len = _strlen(str);
+	num = write(STDOUT_FILENO, str, len);
+	if (num == -1)
+	{
+		perror("write");
+	}
+}

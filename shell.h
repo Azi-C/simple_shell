@@ -41,6 +41,8 @@ int _atoi(char *str);
 void _puterror(char *r);
 int print_setenv(char **commande);
 int print_unsetenv(char **commande);
+void command_cd(char **commande);
+void _puts(char *str);
 
 
 #endif
