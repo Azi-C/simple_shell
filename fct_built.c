@@ -47,6 +47,9 @@ void hd_buil(char **commande, char **argv, int *status, int idx)
 /**
  * exit_shell - this funtion that exit the shell terminal
  * @status: the value of exit
+ * @commande: the command line
+ * @argv: this is the array
+ * @idx: this is the index
  * Return: sgmt default
  */
 

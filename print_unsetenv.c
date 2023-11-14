@@ -23,7 +23,7 @@ int print_unsetenv(char **commande)
 	{
 		_puterror("unsetenv");
 		freearray(commande);
-		return(-1);
+		return (-1);
 	}
 	freearray(commande);
 	return (0);

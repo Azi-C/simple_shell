@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * shell_setenv - Set the value in terminal
+ * print_setenv - Set the value in terminal
  * @commande: Arguments (name and value of the environment variable)
  *
  * Return: 0 or -1
