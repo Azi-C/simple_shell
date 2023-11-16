@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _getenv - gives us the value of an environment variables
+ * _getenv - gives us the value of an environment variableeeeeeeees
  * @var: the environment variable
  * Return: the value of the variable
  */
