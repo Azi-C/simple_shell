@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _atoi - transform an ASCII to an integer
+ * _atoi - transforjjjjjjm an ASCII to an integer
  * @str: the element in ASCII form
  * Return: the element in int
  */
