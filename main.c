@@ -14,7 +14,7 @@ int main(int ac, char **argv)
 	int status = 0, idx = 0;
 	(void) ac;
 
-
+fct_buil
 	while (1)
 	{
 		ligne = read_commands();

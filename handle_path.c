@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _getpath - return the path of a commands
+ * _getpath - return the path of a commanddddddds
  * @cmd: the command
  * Return: the path
  */
